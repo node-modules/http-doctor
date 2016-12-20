@@ -1,0 +1,51 @@
+{
+  "name": "http-doctor",
+  "version": "1.0.0",
+  "description": "A doctor tool to check your http service.",
+  "files": [
+    "bin"
+  ],
+  "bin": {
+    "http-doctor": "bin/doctor.js"
+  },
+  "scripts": {
+    "test": "npm run lint && egg-bin test",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod -w --prefix '^'"
+  },
+  "dependencies": {
+    "agentkeepalive": "^3.0.0",
+    "urllib": "^2.19.0"
+  },
+  "devDependencies": {
+    "autod": "*",
+    "egg-ci": "*",
+    "egg-bin": "1",
+    "eslint": "3",
+    "eslint-config-egg": "3"
+  },
+  "homepage": "https://github.com/node-modules/http-doctor",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/node-modules/http-doctor.git",
+    "web": "https://github.com/node-modules/http-doctor"
+  },
+  "bugs": {
+    "url": "https://github.com/node-modules/http-doctor/issues",
+    "email": "fengmk2@gmail.com"
+  },
+  "keywords": [
+    "http-doctor"
+  ],
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "ci": {
+    "versions": "4, 6, 7"
+  },
+  "author": "fengmk2 <fengmk2@gmail.com> (https://fengmk2.com)",
+  "license": "MIT"
+}
