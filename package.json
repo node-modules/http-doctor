@@ -14,11 +14,14 @@
     "cov": "egg-bin cov",
     "lint": "eslint .",
     "ci": "npm run lint && npm run cov",
-    "autod": "autod -w --prefix '^'"
+    "autod": "autod -w --prefix '^'",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "agentkeepalive": "^3.0.0",
-    "urllib": "^2.19.0"
+    "urllib": "^2.19.0",
+    "snyk": "^1.230.5"
   },
   "devDependencies": {
     "autod": "*",
@@ -47,5 +50,6 @@
     "versions": "4, 6, 7"
   },
   "author": "fengmk2 <fengmk2@gmail.com> (https://fengmk2.com)",
-  "license": "MIT"
+  "license": "MIT",
+  "snyk": true
 }
