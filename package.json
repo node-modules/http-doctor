@@ -9,23 +9,22 @@
     "http-doctor": "bin/doctor.js"
   },
   "scripts": {
-    "test": "npm run lint && egg-bin test",
-    "test-local": "egg-bin test",
-    "cov": "egg-bin cov",
+    "test": "npm run lint && egg-bin test --espower=false",
+    "test-local": "egg-bin test --espower=false",
+    "cov": "egg-bin cov --espower=false",
     "lint": "eslint .",
-    "ci": "npm run lint && npm run cov",
-    "autod": "autod -w --prefix '^'"
+    "ci": "npm run lint && npm run cov"
   },
   "dependencies": {
-    "agentkeepalive": "^3.0.0",
-    "urllib": "^2.19.0"
+    "agentkeepalive": "^4.2.1",
+    "urllib": "^2.39.1"
   },
   "devDependencies": {
-    "autod": "*",
-    "egg-ci": "*",
-    "egg-bin": "1",
-    "eslint": "3",
-    "eslint-config-egg": "3"
+    "clet": "^1.0.1",
+    "egg-bin": "^5.2.0",
+    "egg-ci": "^2.1.0",
+    "eslint": "^8.25.0",
+    "eslint-config-egg": "^12.1.0"
   },
   "homepage": "https://github.com/node-modules/http-doctor",
   "repository": {
@@ -41,11 +40,11 @@
     "http-doctor"
   ],
   "engines": {
-    "node": ">=4.0.0"
+    "node": ">=14.0.0"
   },
   "ci": {
-    "versions": "4, 6, 7"
+    "versions": "14, 16, 18"
   },
-  "author": "fengmk2 <fengmk2@gmail.com> (https://fengmk2.com)",
+  "author": "fengmk2 <fengmk2@gmail.com> (https://github.com/fengmk2)",
   "license": "MIT"
 }
