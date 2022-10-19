@@ -2,19 +2,11 @@ http-doctor
 =======
 
 [![NPM version][npm-image]][npm-url]
-[![build status][travis-image]][travis-url]
-[![Test coverage][codecov-image]][codecov-url]
-[![David deps][david-image]][david-url]
 [![npm download][download-image]][download-url]
+[![Node.js CI](https://github.com/node-modules/http-doctor/actions/workflows/nodejs.yml/badge.svg)](https://github.com/node-modules/http-doctor/actions/workflows/nodejs.yml)
 
 [npm-image]: https://img.shields.io/npm/v/http-doctor.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/http-doctor
-[travis-image]: https://img.shields.io/travis/node-modules/http-doctor.svg?style=flat-square
-[travis-url]: https://travis-ci.org/node-modules/http-doctor
-[codecov-image]: https://codecov.io/github/node-modules/http-doctor/coverage.svg?branch=master
-[codecov-url]: https://codecov.io/github/node-modules/http-doctor?branch=master
-[david-image]: https://img.shields.io/david/node-modules/http-doctor.svg?style=flat-square
-[david-url]: https://david-dm.org/node-modules/http-doctor
 [download-image]: https://img.shields.io/npm/dm/http-doctor.svg?style=flat-square
 [download-url]: https://npmjs.org/package/http-doctor
 
@@ -38,10 +30,10 @@ Usage: $ http-doctor <url>
 ```
 
 ```bash
-$ http-doctor https://basement.alipay.com/api/
+$ http-doctor https://www.alipay.com/
 
 ✅ Server support KeepAlive
-✅ Server KeepAlive timeout is 5s, you should set client KeepAlive timeout to 4s
+✅ Server KeepAlive timeout > 30s, you should set client KeepAlive timeout to 30s
 ```
 
 If not support KeepAlive:
