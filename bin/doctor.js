@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 
-'use strict';
-
 const HttpAgent = require('agentkeepalive');
 const HttpsAgent = require('agentkeepalive').HttpsAgent;
 const urllib = require('urllib');
@@ -14,7 +12,7 @@ if (!url) {
 }
 
 const options = {
-  freeSocketKeepAliveTimeout: 40000,
+  freeSocketTimeout: 40000,
 };
 const agent = new HttpAgent(Object.assign({}, options));
 const httpsAgent = new HttpsAgent(Object.assign({}, options));
@@ -38,7 +36,7 @@ urllib.request(url, {
   }
 
   console.log('✅  Server support KeepAlive');
-  setTimeout(timeoutHandler, 35000);
+  setTimeout(timeoutHandler, 31000);
 }).catch(err => {
   console.error('GET %s error:', url);
   console.error(err);
