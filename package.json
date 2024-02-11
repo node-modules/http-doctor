@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "agentkeepalive": "^4.2.1",
-    "urllib": "^2.39.1"
+    "urllib": "^3.0.0"
   },
   "devDependencies": {
     "clet": "^1.0.1",
